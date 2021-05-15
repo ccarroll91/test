@@ -81,6 +81,13 @@ function toggle(event) {
   }
 }
 
+let show = document.querySelector(".secret");
+show.ontransitionrun = function() {
+  show.textContent = "Christmas at Gran's was written by Michael Brennan at the age of 10, and adapted into this digital story by Conor Carroll. It is with deep regret that Conor discovered that Bonzo did not, in fact, exist and was a figment of Brennan's imagination for the poem. As Michael's brother Tom put it, 'he took a bit of creative licence there'. We hope that you still love him.";
+}
+show.ontransitionend = function() {
+  show.textContent = "Want to know a secret?";
+
 /*---------------------------------------------------audio*/
 /*---- A simple audio function that allows the user to click on the chosen image and play an audio file--*/
 /*---- Format for inserting audio into HTML element is - onclick="playAudio('#.mp3')"---*/
