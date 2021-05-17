@@ -80,6 +80,14 @@ function toggle(event) {
     document.getElementById('secret').style.display = 'none';
   }
 }
+function secretButton() {
+  var x = document.getElementById("secret");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 
 /*---------------------------------------------------audio*/
