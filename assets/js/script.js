@@ -95,13 +95,13 @@ function secretButton() {
 /*---- Format for inserting audio into HTML element is - onclick="playAudio('#.mp3')"---*/
 function playAudio(url) {
   new Audio(url).play().volume='.5';
-}
-
-document.addEventListener('play', function(e){
+  document.addEventListener('play', function(e){
     var audios = document.getElementsByClassName('audio');
     for(var i = 0, len = audios.length; i < len;i++){
         if(audios[i] != e.target){
             audios[i].pause();
         }
     }
-}, true);
+    }, true);
+}
+
