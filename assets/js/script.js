@@ -97,7 +97,7 @@ function playAudio(url) {
     if (Audio(url) === play()) {
         Audio(url) = pause();
     } else {
-        Audio(url).play().volume='.5';
+       new Audio(url).play().volume='.5';
     }
   
 }
