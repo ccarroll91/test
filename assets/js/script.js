@@ -100,8 +100,8 @@ function playAudio(){
     audioPlay = new Audio(url);
     audioPlay.play();
 
-    soundPlayer.pause();
-    soundPlayer.currentTime = 0;
+    audioPlay.pause();
+    audioPlay.currentTime = 0;
 }
 /*
 function playAudio(url) {
