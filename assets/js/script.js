@@ -67,7 +67,7 @@ function openFullscreen() {
 }
 
 /*----------------------------------------------------------------about--*/
-
+/*---
 document.querySelector('#secret-btn').addEventListener('click', toggle);
 
 function toggle(event) {
@@ -79,7 +79,7 @@ function toggle(event) {
     event.target.innerText = 'Want to know a secret?';
     document.getElementById('secret').style.display = 'none';
   }
-}
+}--*/
 function secretButton() {
   var x = document.getElementById("secret");
   if (x.style.display === "none") {
@@ -94,30 +94,11 @@ function secretButton() {
 /*---- A simple audio function that allows the user to click on the chosen image and play an audio file--*/
 /*---- Format for inserting audio into HTML element is - onclick="playAudio('#.mp3')"---*/
 function playAudio(url) {
-  new Audio(url).play().volume='.5';
-  $('.audio')
-    .each(function() {
-    $(this).data('audio', new Audio());
-    
-    })
-    .on('click', function (e) {
-    
-    $('.audio').each(function() {
-        var audio = $(this).data('audio');
-
-        if(audio.src) {
-        audio.pause();
-        audio.currentTime = 0;
-        }
-    });
-    
-    var clickedAudio = $(this).data('audio');
-
-    if(!clickedAudio.src) {
-        clickedAudio.src = $(this).data('audio');
+    if (Audio(url) === play()) {
+        Audio(url) = pause();
+    } else {
+        Audio(url).play().volume='.5';
     }
-
-    clickedAudio.play();
-    });
+  
 }
 
