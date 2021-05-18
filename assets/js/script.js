@@ -93,23 +93,8 @@ function secretButton() {
 /*---------------------------------------------------audio*/
 /*---- A simple audio function that allows the user to click on the chosen image and play an audio file--*/
 /*---- Format for inserting audio into HTML element is - onclick="playAudio('#.mp3')"---*/
-var audioPlay = null;
-
-function playAudio(){
-
-    audioPlay = new Audio(url);
-    audioPlay.play();
-
-    audioPlay.pause();
-    audioPlay.currentTime = 0;
-}
-/*
 function playAudio(url) {
-    if ( new Audio(url).play()) {
-        new Audio(url).pause();
-    } else {
-       new Audio(url).play().volume='.5';
-    }
-  
+    new Audio(url).loop = false;
+    new Audio(url).play().volume='.5';
 }
-*/
+
